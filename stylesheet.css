@@ -6,6 +6,10 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+header {
+    margin: auto;
+    text-align: center;
+}
 
 main.main-column{
     width: 50pc;
