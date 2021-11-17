@@ -7,9 +7,12 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../index.html'))
 });
 
+app.get('/stylesheet', (req, res) => {
+    res.sendFile(path.join(__dirname, '../stylesheet.css'))
+  })
 
 
-app.get('/', function(req, res) {
+app.get('/main.js', function(req, res) {
     res.sendFile(path.join(__dirname, '../main.js'))
 });
 
