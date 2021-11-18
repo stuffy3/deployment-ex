@@ -26,8 +26,8 @@ app.get('/stylesheet.css', (req, res) => {
     res.sendFile(path.join(__dirname, '../stylesheet.css'))
     rollbar.info('css file loaded')
   })
-  app.get('/server/pictures/ship.jpg', (req, res) => {
-    res.sendFile(path.join(__dirname, '../pictures/ship.jpg'))
+  app.get('/ship.jpg', (req, res) => {
+    res.sendFile(path.join(__dirname, '../ship.jpg'))
   })
 
  app.get('/buy', (req, res) => {
