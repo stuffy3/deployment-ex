@@ -14,14 +14,22 @@ rollbar.log('Hello world!')
 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '../index.html'))
+    rollbar.info("html file served successfully")
 });
 
 app.get('/stylesheet.css', (req, res) => {
     res.sendFile(path.join(__dirname, '../stylesheet.css'))
+    rollbar.info('css file loaded')
   })
   app.get('/ship.jpg', (req, res) => {
     res.sendFile(path.join(__dirname, '../ship.jpg'))
   })
+
+ app.get('/buy', (req, res) => {
+   res.sendFile(path.join(__dirname, "../buy.html"))
+   rollbar.error("No such file exists")
+   
+ })
 
 app.use(rollbar.errorHandler());
 
